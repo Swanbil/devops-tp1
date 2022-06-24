@@ -7,7 +7,7 @@ pipeline {
   stages {     
     stage('Build') {
       steps {
-        sh 'ls'
+        sh 'npm install'
         sh 'cd client;npm install'
       }
     }  
