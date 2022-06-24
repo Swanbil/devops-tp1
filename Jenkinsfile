@@ -3,8 +3,13 @@ pipeline {
     environment {
         CI = 'true'
     }
-    
+  tools {nodejs "node"}
   stages {     
+    stage('Example') {
+      steps {
+        sh 'npm config ls'
+      }
+    }
     stage('Build') {
       steps {
         sh 'ls'
