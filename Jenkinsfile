@@ -10,16 +10,16 @@ pipeline {
         sh 'npm config ls'
       }
     }
-    stage('Build') {
-      steps {
-        sh 'ls'
-        sh 'cd client;npm install'
-      }
-    }  
-    stage('Test') {
-      steps {  
-        echo 'Test'
-      }
-    }
+    // stage('Build') {
+    //   steps {
+    //     sh 'ls'
+    //     sh 'cd client;npm install'
+    //   }
+    // }  
+    // stage('Test') {
+    //   steps {  
+    //     echo 'Test'
+    //   }
+    // }
   }
 }
