@@ -5,21 +5,16 @@ pipeline {
     }
   tools {nodejs "nodejs"}
   stages {     
-    stage('Example') {
+    stage('Build') {
       steps {
-        sh 'npm config ls'
+        sh 'ls'
+        sh 'cd client;npm install'
+      }
+    }  
+    stage('Test') {
+      steps {  
+        echo 'Test'
       }
     }
-    // stage('Build') {
-    //   steps {
-    //     sh 'ls'
-    //     sh 'cd client;npm install'
-    //   }
-    // }  
-    // stage('Test') {
-    //   steps {  
-    //     echo 'Test'
-    //   }
-    // }
   }
 }
