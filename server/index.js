@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 app.use('/api/cities', require('./api/cities'));
 app.use('/api/weather', require('./api/weather'));
-
+app.get('/test', (req, res) => res.json({message:"The api is working !"}));
 if (ENV === 'production') {
   app.use(express.static(path.join(__dirname), '../client/build'));
   app.use((req, res) => {
