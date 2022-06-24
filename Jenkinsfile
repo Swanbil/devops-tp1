@@ -7,7 +7,7 @@ pipeline {
   stages {     
     stage('Build') {
       steps {
-        sh 'ls'
+        sh 'node -v'
         sh 'cd client;npm install'
       }
     }  
