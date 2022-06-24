@@ -11,8 +11,8 @@ pipeline {
       }
     }  
     stage('Test') {
-      steps {
-        sh 'node test'
+      steps {  
+        echo 'Test'
       }
     }
   }
